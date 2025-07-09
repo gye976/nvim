@@ -20,6 +20,9 @@ vim.api.nvim_set_keymap('n', '<Leader>q', ':q!<CR>', { noremap = true, silent = 
 
 vim.api.nvim_set_keymap('n', '<Leader>bq', ':bufdo bd!<CR>', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<C-k>', '{', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-j>', '}', { noremap = true, silent = true })
+
 --disable to log jumplist by {,}
 --vim.keymap.set('n', '{', [[:keepjumps normal! {<CR>]], { silent = true })
 --vim.keymap.set('n', '}', [[:keepjumps normal! }<CR>]], { silent = true })
