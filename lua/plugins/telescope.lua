@@ -21,6 +21,10 @@ return {
                     height = 0.9,
                     preview_cutoff = 100,
                 },
+		history = {
+			path = vim.fn.stdpath('data') .. '/databases/telescope_history.sqlite3',
+			limit = 100,
+		},
             },
             extensions = {
                 live_grep_args = {
@@ -45,6 +49,8 @@ return {
 
         --vim.keymap.set('n', '<leader>fg', builtin.live_grep,  { desc = 'Telescope live grep (builtin)' })
         vim.keymap.set('n', '<leader>fg', require("telescope").extensions.live_grep_args.live_grep_args, { desc = 'Telescope live grep (with args)' })
+
+	vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').resume)
 
         telescope.load_extension("live_grep_args")
     end
