@@ -21,7 +21,8 @@ return {
       lspconfig.clangd.setup({})
       lspconfig.bashls.setup({})
 
-	vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = 'LSP: Hover', noremap = true, silent = true })
+	--vim.keymap.set('n', 'K', vim.lsp.buf.hover, { desc = 'LSP: Hover', noremap = true, silent = true })
+	vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap=true, silent=true })
 
     end
   }
