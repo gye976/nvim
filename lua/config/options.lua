@@ -7,3 +7,4 @@ vim.o.number = true
 
 vim.o.cursorline = true
 
+vim.o.wrap = false
