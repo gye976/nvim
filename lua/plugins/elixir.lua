@@ -21,7 +21,10 @@ return {
 	local elixir = require("elixir")
 
 	vim.keymap.set('n', '<Leader><Left>', elixir.tab.prev, { noremap = true, silent = true })
+	vim.keymap.set('n', '<Leader>h', elixir.tab.prev, { noremap = true, silent = true })
+
 	vim.keymap.set('n', '<Leader><Right>', elixir.tab.next, { noremap = true, silent = true })
+	vim.keymap.set('n', '<Leader>l', elixir.tab.next, { noremap = true, silent = true })
 
         vim.keymap.set("n", "<leader>ss", elixir.search.symbol, { desc = "Search Symbol" })
         vim.keymap.set("n", "<leader>sd", elixir.search.definition, { desc = "Search Definition" })
