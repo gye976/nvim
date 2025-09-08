@@ -32,8 +32,13 @@ return {
         vim.keymap.set('n', "<leader>t", elixir.tab.new_in_cur_buf, { desc = 'tab new', noremap = true, silent = true })
 	vim.keymap.set('n', '<Leader>q', elixir.tab.close, { noremap = true, silent = true })
 
-        vim.keymap.set('n', 'gf', elixir.goto.def_in_ctx, { desc = 'LSP: gf', noremap = true, silent = true })
         vim.keymap.set('n', '<Leader>p', elixir.goto.print_cur_ctx, { desc = 'ts debug', noremap = true, silent = true })
+
+        vim.keymap.set('n', 'gf', elixir.goto.goto_ctx, { desc = 'goto ctx', noremap = true, silent = true })
+        vim.keymap.set('n', 'g<Up>', elixir.goto.goto_compound_start, { desc = 'compound start', noremap = true, silent = true })
+        vim.keymap.set('n', 'gk', elixir.goto.goto_compound_start, { desc = 'compound start', noremap = true, silent = true })
+        vim.keymap.set('n', 'g<Down>', elixir.goto.goto_compound_end, { desc = 'compound end', noremap = true, silent = true })
+        vim.keymap.set('n', 'gj', elixir.goto.goto_compound_end, { desc = 'compound end', noremap = true, silent = true })
 
         vim.keymap.set('n', 'gd', elixir.goto.def, { desc = 'LSP: gd', noremap = true, silent = true })
         vim.keymap.set('n', 'gr', elixir.goto.ref, { desc = 'LSP: gr', noremap = true, silent = true })

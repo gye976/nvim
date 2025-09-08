@@ -1,3 +1,4 @@
+
 --leader key = space
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -15,6 +16,8 @@ vim.api.nvim_set_keymap('n', '<Leader>w<Up>', '<C-w>k', { noremap = true, silent
 vim.api.nvim_set_keymap('n', '<Leader>wk', '<C-w>k', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>w<Down>', '<C-w>j', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>wj', '<C-w>j', { noremap = true, silent = true })
+
+vim.keymap.set('n', 'd', '"_d', { noremap = true })
 
 --vim.keymap.set('n', '<C-k>', '{', { noremap = true, silent = true })
 --vim.keymap.set('n', '<C-j>', '}', { noremap = true, silent = true })
